@@ -11,8 +11,8 @@
     "clean": "farm clean"
   },
   "devDependencies": {
-    "@farmfe/cli": "^1.0.1",
-    "@farmfe/core": "^1.1.1",
+    "@farmfe/cli": "0.0.0-2.0.0-nightly.20241021.f5f5939-20241021064320",
+    "@farmfe/core": "0.0.0-2.0.0-nightly.20241021.f5f5939-20241021064320",
     "@types/jquery": "^3.5.29",
     "jquery": "^3.7.1",
     "typescript": "^5.4.3"

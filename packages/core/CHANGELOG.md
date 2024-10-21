@@ -1,5 +1,11 @@
 # @farmfe/core
 
+## 0.0.0-2.0.0-nightly.20241021.f5f5939-20241021064320
+
+### Major Changes
+
+- a82a5b21: bump nightly version
+
 ## 1.3.29
 
 ### Patch Changes

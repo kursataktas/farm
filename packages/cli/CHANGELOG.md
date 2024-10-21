@@ -1,5 +1,16 @@
 # @farmfe/cli
 
+## 0.0.0-2.0.0-nightly.20241021.f5f5939-20241021064320
+
+### Major Changes
+
+- a82a5b21: bump nightly version
+
+### Patch Changes
+
+- Updated dependencies [a82a5b21]
+  - @farmfe/core@0.0.0-2.0.0-nightly.20241021.f5f5939-20241021064320
+
 ## 1.0.4
 
 ### Patch Changes

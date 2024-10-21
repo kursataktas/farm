@@ -1,5 +1,12 @@
 # @farmfe/js-plugin-solid
 
+## 0.0.0-2.0.0-nightly.20241021.f5f5939-20241021064320
+
+### Patch Changes
+
+- Updated dependencies [a82a5b21]
+  - @farmfe/core@0.0.0-2.0.0-nightly.20241021.f5f5939-20241021064320
+
 ## 2.8.0
 
 ### Patch Changes
