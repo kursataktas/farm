@@ -34,7 +34,7 @@ pub struct SourceReplacer<'a> {
   module_graph: &'a ModuleGraph,
   module_id: ModuleId,
   mode: Mode,
-  pub external_modules: Vec<String>,
+  pub external_modules: Vec<ModuleId>,
   target_env: TargetEnv,
 }
 
@@ -138,9 +138,10 @@ impl SourceReplacer<'_> {
 
         let (id, resolve_kind) =
           (self.find_real_module_meta_by_source(&source)).unwrap_or_else(|| {
+            let deps = self.module_graph.dependencies(&self.module_id);
             panic!(
-              "Cannot find module id for source {:?} from {:?}",
-              source, self.module_id
+              "Cannot find module id for source {:?} from {:?}. current deps {:#?}",
+              source, self.module_id, deps
             )
           });
         // only execute script module
@@ -159,7 +160,7 @@ impl SourceReplacer<'_> {
             return SourceReplaceResult::NotReplaced;
           }
 
-          self.external_modules.push(id.to_string());
+          self.external_modules.push(id.clone());
 
           return SourceReplaceResult::NotReplaced;
         }
@@ -192,7 +193,7 @@ impl SourceReplacer<'_> {
         let dep_module = self.module_graph.module(&id).unwrap();
 
         if dep_module.external {
-          self.external_modules.push(id.to_string());
+          self.external_modules.push(id.clone());
 
           return SourceReplaceResult::NotReplaced;
         }
